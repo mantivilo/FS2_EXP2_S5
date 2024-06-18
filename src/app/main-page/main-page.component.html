@@ -1,0 +1,24 @@
+<header class="bg-success text-white text-center p-3">
+    <h1>Ninja Board Games - Juegos de Mesa</h1>
+</header>
+<main class="container mt-5">
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <h2>Categorías de Juegos</h2>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4" *ngFor="let category of categories">
+            <div class="card h-100">
+                <img [src]="category.img" class="card-img-top" [alt]="category.title">
+                <div class="card-body">
+                    <h5 class="card-title">{{ category.title }}</h5>
+                    <a [routerLink]="category.link" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <a routerLink="/registro" class="btn btn-success">Registro de Compras</a>
+        </div>
+    </div>
+</main>

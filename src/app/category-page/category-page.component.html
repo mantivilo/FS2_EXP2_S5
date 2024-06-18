@@ -1,0 +1,24 @@
+<header class="bg-success text-white text-center p-3">
+    <h1>Ninja Board Games</h1>
+    <nav>
+        <a routerLink="/" class="text-white">Inicio</a>
+    </nav>
+</header>
+<main class="container mt-5">
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <h2>Juegos de Cartas</h2>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4" *ngFor="let game of games">
+            <div class="card h-100">
+                <img [src]="game.img" class="card-img-top fixed-size" [alt]="game.title">
+                <div class="card-body">
+                    <h5 class="card-title">{{ game.title }}</h5>
+                    <p class="card-text">{{ game.description }}</p>
+                    <p>Precio: {{ game.price }}</p>
+                    <p>Descuento: {{ game.discount ? 'Sí' : 'No' }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
